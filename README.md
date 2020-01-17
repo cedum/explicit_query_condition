@@ -31,7 +31,7 @@ class Post < ActiveRecord::Base
   include ExplicitQueryCondition::ModelExtension
 
   # define the column you want to be present in all queries
-  enforced_condition_column :deleted_at
+  self.explicit_condition_column = :deleted_at
 end
 ```
 
@@ -48,3 +48,17 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/cedum/
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## About
+
+[![Nebulab][nebulab-logo]][nebulab]
+
+`explicit_query_condition` is funded and maintained by the [Nebulab][nebulab] team.
+
+We firmly believe in the power of open-source. [Contact us][contact-us] if you
+like our work and you need help with your project design or development.
+
+[solidus]: http://solidus.io/
+[nebulab]: http://nebulab.it/
+[nebulab-logo]: http://nebulab.it/assets/images/public/logo.svg
+[contact-us]: http://nebulab.it/contact-us/
